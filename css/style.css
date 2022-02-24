@@ -1,0 +1,567 @@
+/* 웹폰트 연결 - 눈누*/
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@font-face {
+    font-family: 'Vitro_core';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Vitro_core.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* { margin: 0; padding: 0;}
+li {list-style: none;}
+a { text-decoration: none; display: block; color: #212121;
+font-family:'NanumSqure',sans-serif;}
+html,body { overflow-x: hidden;}
+/* 스크롤바 없어짐 */
+body { font-family:'NanumSqure',sans-serif; }
+/* 시멘틱 태그 선택자 */
+header, section, footer {
+    width: 100%;
+    float: left;
+}
+/*  헤더 섹션 푸터안의 직속 자식 객체, 항상 브라우저의 가운데 정렬 */
+.box {
+    width: 1200px;
+    margin: 0 auto;
+}
+/* 이미지 크기는 부모 크기에 맞춤 */
+img { width: 100%;}
+/* 헤더 */
+header {
+    /* 서서히 나타나게 */
+    /* transition: all 0.5s[; */
+    position: fixed;
+    height: 90px;
+    top: 0;
+    left: 0;
+    background-color: transparent; /* 배경 투명 */
+    z-index: 120;
+}
+/* 화면이 아래로 내려가면 헤더의 배경색 흰색으로 변함 (제이쿼리)배경이 있을때 메뉴가 색이 나타낫다가 없어져야할때 쓰면됨.*/
+header.active {
+    background-color: #fff;
+    box-shadow: 0 0 10px #ccc;
+    /* 그림자 */
+}
+/* 로고 */
+header .box .logo {
+    width: 180px;
+    float: left;
+    margin: 30px 0; /* 위아래 여백 10픽셀 */
+}
+/* 내비게이션 */
+header .box nav {
+    float: left;   /* 로고 옆에 배치 */
+    margin-left: 30px; /* 로고와의 거리 */
+    margin-top: 35px; /* 위쪽 여백 */
+    /* 서브메뉴배경보다 위에 있어야함 */
+    z-index: 60;
+    position: relative;
+}
+/* 주메뉴 */
+header .box nav > ul > li {
+    float: left;
+}
+header .box nav > ul > li > a {
+    font-size: 16px;
+    padding: 5px 40px;
+    font-weight: bold;
+}
+header .box nav > ul > li:hover > a {
+    color: #d1131c;
+}
+/* 서브메뉴 */
+header .box nav .sub {
+    height: 0;
+    transition: all 0.5s;
+    overflow: hidden; /* 영역을 벗어난 컨텐츠 숨김 */
+}
+header .box nav .sub li a {
+    text-align:  center;
+    padding: 15px;
+    font-size: 14px;
+}
+/* 첫번째 서브메뉴의 위쪽 여백 늘리기 */
+header .box nav .sub li:first-child a {
+    padding-top: 30px;
+}
+header .box nav .sub li a:hover {
+    color: #d1131c;
+}
+
+/* 주메뉴에 마우스 오버했을 때 서브메뉴 나옴 */
+header .box nav:hover .sub {
+    height:350px; /* 높이가 0에서 200픽셀로 0.5초동안 변함 */
+}
+/* 서브메뉴 배경 */
+header .sub_bg {
+    width: 100%;
+    height: 350px;
+    background-color: #fff;
+    position: absolute; /*서브메뉴와 겹침*/
+    top: 70px; /*위치설정*/
+    left: 0;
+    z-index: 50;
+    display: none; /*숨김*/
+}
+/* 로그인 회원가입 아이콘 */
+header .box .top_menu {
+    float: right;
+    margin-top: 35px;
+}
+header .box .top_menu ul li {
+    float: left;
+    margin-left: 30px;
+}
+header .box .top_menu ul li a {
+    width: 25px;
+}
+
+/* 메인비주얼 */
+section {
+    position: relative; /*겹쳐지게*/
+}
+.s1 {
+    width: 100%;
+    height: 700px;
+
+}
+.s1 .photo {
+    margin-top: 100px;
+    width: 100%;
+    height: 700px;
+    position: relative;
+    /* 자식객체 li(이미지) 들이 겹쳐질때  .photo를 기준으로 위치설정*/
+}
+
+.s1 .photo ul li {
+    position: absolute; /*겹침*/
+    width: 100%;
+    height: 700px;
+}
+/* 메인비주얼의 첫번째이미지가 보이도록 설정하기 */
+.s1 .photo ul li {
+    display: none;
+}
+.s1 .photo ul li:first-child {
+    display: block;
+}
+.bar {
+    width: 50px;
+    /* height: 2300px; */
+    background-color:#d1131c ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 130;
+}
+/* 메인 비주얼의 설명과 버튼 */
+/*.s1 .des_box {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 150px ;
+    포지션 absoulte일때 좌우 가운데 정렬공식
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}*/
+
+.s1 .number {
+   position: absolute;
+   bottom:-90px;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 50;
+    
+}
+.s1 .number .num div {
+    float: left;
+    
+}
+
+.s1 .number .num ul li {
+    float:left;
+    width: 20px;
+    height: 20px;    
+    position: relative;
+    margin-right: 10px;
+}
+.s1 .number .num ul li a{
+    background-color: #fff;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+
+}
+.s1 .number .num ul li a.active {    
+    background-color: #333;   
+}
+
+/* 재생 일시정지 버튼 엑티브 */
+.s1 .number .btn a {
+    float:left;
+    width: 20px; 
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 180px;
+    background-image: url(../img/play_btn2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.s1 .number .btn a.active {
+    background-image: url(../img/pause_btn.png);
+}
+/* 스크롤 애니메이션 동그라미 상하운동*/
+/* keyframes 라는 css명령어 사용, ani는 애니메이션 이름 */
+@keyframes ani {
+    0%{
+        margin-top: 5px;
+        opacity: 1; /*불투명*/
+    }
+    40%{
+        margin-top: 20px;
+        opacity: 1;
+    }
+    60%{
+        opacity: 1; /*투명*/
+    }
+    100%{
+        opacity: 0; /*투명*/
+    }
+}
+/* 스크롤 */
+.s1 .scroll {
+    width: 30px;
+    height: 60px;
+    position: absolute; /*포토와겹침*/
+    left: 57%;
+    transform: translateX(-50%);
+    bottom: -80px;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+}
+.s1 .scroll .scroll_btn {
+    width: 24px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid white;
+    margin: 0 auto;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+.s1 .scroll .scroll_btn .circle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color:#d1131c;
+    margin-left: 6px;
+    margin-top: 7px;
+    animation:ani 3s infinite;
+}
+    /* keyframes 에서 지정한 애니메이션을 실행하는 명령여, 3초동안 실행 */
+
+.s2 {
+    width: 100%;
+    height: 600px;
+}
+
+.s2 .box {
+    width: 450px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.s2 h2 {
+    font-family: 'Vitro_core';
+    font-size: 24px;
+}
+.s2 button {
+    width: 200px;
+    height: 60px;
+    background-color: #444342;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.s2 h2, button {
+    margin-top: 270px;
+    margin-left: 550px;
+}
+/* 상품 HEAT360 */
+.s3 .product1 {
+    width: 950px;
+    margin-top: 170px;
+    position: absolute;
+}
+/* 언제어디서든 핫한 겨울을 */
+.s3 .product1 span {
+    font-size: 20px;
+    margin-left: 160px;
+    position: absolute;
+    line-height: 40px;
+    font-weight: bold;
+    top: -160px;
+    left: 200px;
+    transform: translateX(-50%);
+}
+
+.s3 .product1 h1 {
+    font-size: 48px;
+    margin-top: 30px;
+    position: absolute;
+    top: -160px;
+    left: 280px;
+    transform: translateX(-50%);
+}
+.s3 .product_icon {
+    width: 160px;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 290px;
+    background-color: transparent;
+    z-index: 30;
+}
+.s3 .product_list {
+    width: 460px;
+    font-size: 18px;
+    text-align: right;
+    position: absolute;
+    margin-top: 350px;
+    margin-left: 250px;
+    font-family: NanumSqure;
+    line-height: 60px;
+    z-index: 20;
+}
+.s3 .product_list a{
+    color: #ccc;
+    border-bottom: 3px solid #ccc;
+    width: 320px;
+}
+
+.s3 .product_list a:hover,
+.s3 .product_list a.active
+{
+    color: #d1131c;
+    border-bottom: 3px solid #d1131c;
+    width: 320px;
+}
+.s3 .product_list ul li:first-child:hover,  .s3 .visual ul li:first-child {
+    display: block;
+}
+.s3 .product_list ul li:nth-child(2):hover .s3 .visual ul li:nth-child(2) {
+    display: block;
+}
+ 
+  
+.s3 .product1 .back {
+    width: 900px;
+    height: 670px;
+    background-color: #444342;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.s3 .visual {
+    width: 1300px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.s3 .visual ul li {
+    position: absolute;
+    width: 1300px;
+}
+.s3 .visual ul li {
+    display: none;
+}
+.s3 .visual ul li:first-child {
+    display: block;
+}
+/* md초이스 신제품*/
+.s4 {
+    width: 100%;
+    position: relative;}
+.s4 .area{
+    width: 1920px;
+    margin: 0 auto;
+}
+.s4 .md_bg {
+    float: left;
+    width: 339px;
+}
+.s4 .md_des {
+    float: left;
+    padding: 30px;
+}
+.s4 .md_des .md_title_logo {
+    width: 100px;
+}
+.s4 .md_des .md_title h2 {
+    font-size: 48px;
+    font-weight: bolder;
+    color: #444342 ;
+    float: left;
+    margin-bottom: 70px;
+}
+.s4 .md_des .md_title hr {
+    float: left;
+    width: 300px;
+    margin-top: 35px;
+    margin-left: 20px;
+    border: none;
+    height: 3px;
+    color: #444342;
+    background-color: #444342;
+    
+}
+.s4 .md_title a {
+    width: 80px;
+}
+
+.s4 .md_list {
+    position: absolute; /* 타이틀 영역과 겹침*/
+    left: 350px;
+    top: 350px;
+    width: 100%;
+}
+
+.s4 .area .md_list div div  {
+    position: relative;
+    
+}
+.s4 .area .md_list h4, h3 {
+    font-size: 12px;
+    line-height: 23px;
+    height: 23px;
+    width: 53px;
+    border: 1px solid #444342;
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.s4 .area .md_list p {
+    font-size: 17px;
+}
+.s4 .area .md_list h1 {
+    margin-top: 5px;
+    font-size: 24px;
+}
+.s5 {
+    width: 100%;
+    /* height: 1400px; */
+}
+.s5 .video {
+    width: 1880px;
+    height:860px;
+    overflow:hidden;
+    float: right;
+    margin-top: 150px;
+}
+.s5 .video_icon {
+    width:250px;
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.s6 {
+    width: 100%;
+    /* height: 700px; */
+}
+.s6 .box {
+    margin-top: 190px;
+}
+.s6 .box ul li {
+    float: left;
+    width: 190px;
+    margin: 5px;
+}
+.s6 .btn {
+    width:100%;
+    float:left;
+}
+.s6 .btn a {
+    width:200px;
+    margin:30px auto;
+}
+.s7 {
+    height: 200px;
+}
+.s7 .box a {
+    width: 190px;
+    margin: 0 auto;
+}
+footer {
+    width: 100%;
+    height: 440px;
+    position:relative;
+}
+
+footer hr {
+    margin-top: 50px;
+    border: none;
+    height: 3px;
+    color: #444342;
+    background-color: #444342;
+    width: 1750px;
+    margin-left: 100px;
+}
+.ft_box {
+    margin-left: 350px;
+}
+
+.ft_top ul li {
+    float: left;
+    margin: 20px;
+    margin-right: 60px;
+    font-size: 14px;
+    color: #444342;
+}
+footer .box .ft_left, .ft_right {
+    float: left;
+}
+footer .box .ft_left img {
+    width: 100px;
+    margin: 50px 0px;
+}
+footer .box .ft_left address {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 25px;
+    color: #444342;
+}
+footer .box .ft_right h1 {
+    font-size: 30px;
+    line-height: 12px;
+    
+}
+footer .box .ft_right span {
+    font-size: 18px;
+    line-height: 30px;
+}
+.ft_right {
+    float: right;
+    margin-top: 130px;
+    line-height: 25px;
+    color: #444342;
+}
+footer .box .ft_left {
+    color: #444342;
+}
+
+
+

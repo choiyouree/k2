@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>k2</title>
+    <!-- 파비콘 -->
+    <link href="img/k2favicon.png" type="img/x-icon" rel="shortcut icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>  
+ 
+    <!-- 외부 css 연결 -->
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+   
+    <!-- 제이쿼리 라이브러리 연결 -->
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- 자바스크립트 -->
+    <script src="js/main.js"></script>
+    
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="box">
+                <!-- 로고 -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/k2_logo.png" alt="k2 로고">
+                    </a>
+                </div>
+                
+                <!-- 내비게이션(2차원 메뉴) -->
+                <nav>
+                    <ul>
+                        <li>
+                            <!-- 주메뉴 -->
+                            <a href="#">MEN</a>
+                            <!-- 서브메뉴 -->
+                            <ul class="sub">
+                                <li><a href="#">자켓</a></li>
+                                <li><a href="#">티셔츠/셔츠</a></li>
+                                <li><a href="#">베스트</a></li>
+                                <li><a href="#">팬츠</a></li>
+                                <li><a href="#">이너웨어</a></li>
+                                <li><a href="#">신상기획</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <!-- 주메뉴 -->
+                            <a href="#">WOMEN</a>
+                            <!-- 서브메뉴 -->
+                            <ul class="sub">
+                                <li><a href="#">자켓</a></li>
+                                <li><a href="#">티셔츠/셔츠</a></li>
+                                <li><a href="#">베스트</a></li>
+                                <li><a href="#">팬츠</a></li>
+                                <li><a href="#">이너웨어</a></li>
+                                <li><a href="#">신상기획</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <!-- 주메뉴 -->
+                            <a href="#">KIDS</a>
+                            <!-- 서브메뉴 -->
+                            <ul class="sub">
+                                <li><a href="#">신상키즈</a></li>
+                                <li><a href="#">신상기획</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <!-- 주메뉴 -->
+                            <a href="#">SHEOS</a>
+                            <!-- 서브메뉴 -->
+                            <ul class="sub">
+                                <li><a href="#">남성용</a></li>
+                                <li><a href="#">여성용</a></li>
+                                <li><a href="#">키즈</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <!-- 주메뉴 -->
+                            <a href="#">BAG</a>
+                            <!-- 서브메뉴 -->
+                            <ul class="sub">
+                                <li><a href="#">등산배낭</a></li>
+                                <li><a href="#">일반배낭</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <!-- 주메뉴 -->
+                            <a href="#">ACC</a>
+                            <!-- 서브메뉴 -->
+                            <ul class="sub">
+                                <li><a href="#">모자</a></li>
+                                <li><a href="#">장갑</a></li>
+                                <li><a href="#">양말</a></li>
+                                <li><a href="#">이너웨어</a></li>
+                                <li><a href="#">스틱</a></li>
+                                <li><a href="#">캠핑</a></li>
+                                <li><a href="#">기타</a></li>
+                            </ul>
+                    </ul>
+                </nav>
+                <!-- 로그인. 회원가입 -->
+                <div class="top_menu">
+                    <ul>
+                        <li><a href="#"><img src="img/user_icon.png" alt="유저 아이콘"></a></li>
+                        <li><a href="#"><img src="img/hamburger_btn.png" alt="더보기 아이콘"></a></li>
+                        <li><a href="#"><img src="img/basket_icon.png" alt="장바구니 아이콘"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 서브메뉴 배경은 .box 의 형제객체로 코딩함. css에서는 부모나 부모의 형제를 제어하는 선택자가 없어서 제이쿼리로 제어해야함 -->
+            <div class="sub_bg">
+            </div>
+        </header>
+        <section class="s1">
+            <!-- 메인 비주얼의 이미지 영역-->
+            <div class="photo">
+                <ul>
+                    <li><img src="img/k2main1.JPG" alt="메인이미지1"></li>
+                    <li><img src="img/k2main2.jpg" alt="메인이미지2"></li>
+                    <li><img src="img/k2main3.jpg" alt="케이투 코리아 쇼핑 페스티벌"></li>
+                    <li><img src="img/k2main4.jpg" alt="변화무쌍 요즘 날씨 열일하는 기능 잇템"></li>
+                    <li><img src="img/k2main5.jpg" alt="HEAT 360"></li>
+                    <li><img src="img/k2main6.jpg" alt="가을/겨울 페스티벌"></li>
+                </ul>
+
+            </div>
+            <!-- 화면 왼쪽 막대 -->
+            <div class="bar">
+            </div>
+            <!-- 메인비주얼 버튼 동그라미 -->
+           
+            <div class="number">
+                <div class="num">
+                    <ul>
+                        <li><a href="#" class="active"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+                <div class="btn">
+                    <a href="#">
+                        <!-- <img src="img/play_btn2.png" alt="재생 버튼"> -->
+                    </a>
+                </div>
+            </div>
+         
+            <div class="scroll">
+                <p>SCROLL</p>
+                <div class="scroll_btn">
+                    <div class="circle"></div>
+                </div>
+            </div>
+         </section>
+         
+        <section class="s2">
+            <div class="box">
+                <img src="img/k2_shoes.png" alt="수지cf운동화">
+            </div>
+            <h2>K2 CF 속 수지의 신발은?</h2>
+            <button>자세히보기</button>
+            <div class="bar">
+            </div>
+        </section>
+        <section class="s3">
+            <div class="product1">
+                <div class="d1"><span>언제어디서든 최고 55ºC의 HOT한 겨울을!</span></div>
+                <div class="d2"><h1>HEAT 360</h1></div>
+                <div class="product_icon">
+                    <a href="#"><img src="img/add.png" alt="상품 더보기"></a>
+                </div>
+                <div class="product_list">
+                    <ul>
+                        <li class="t1"><a href="#" class="active">K2만의 나노 인쇄 기술 디자인</a></li>
+                        <li class="t2"><a href="#">전용 조절기 및 스마트폰 APP으로 제어</a></li>
+                        <li class="t3"><a href="#">스마트한 발열 패드 시스템</a></li>
+                    </ul>
+                </div>
+                <div class="back"></div>
+            </div>
+            <div class="visual">
+                <ul>
+                    <li class="img1"><img src="img/k2visual_1.png" alt=""></li>
+                    <li class="img2"><img src="img/k2visual_2.png" alt=""></li>
+                    <li class="img3"><img src="img/k2visual_3.png" alt=""></li>
+                </ul>
+            </div>
+            <div class="bar">
+            </div>
+        </section>
+        <section class="s4">
+            <div class="area">
+                <div class="md_bg">
+                    <img src="img/k2visual_mountin.png" alt="k2 산 배경">
+                </div>
+                <div class="md_des">
+                    <div class="md_title_logo">
+                        <img src="img/k2logo.png" alt="k2 로고">
+                    </div>
+                    <div class="md_title">
+                        <h2>MD CHOICE</h2>
+                        <hr>
+
+                        <a href="#"><img src="img/add_grey.png" alt="더보기 버튼"></a>
+                    </div>
+                </div>
+                <div class="md_list">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="md_img">
+                                    <a href="#"><img src="img/md2.JPG" alt="md1"></a>
+                                </div>
+                                <h4>21FW</h4><h3>NEW</h3><br><br>
+                                <p>남녀공용 비숑(BICHON) 리버시블 다운</p>
+                                <h1>279,000 w</h1>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="md_img">
+                                    <a href="#"><img src="img/md6.JPG" alt="md2"></a>
+                                </div>
+                                <h4>21FW</h4><h3>NEW</h3><br><br>
+                                <p>남녀공용 씬에어(THINAIR) ECO LITE M</p>
+                                <h1>340,000 w</h1>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="md_img">
+                                    <a href="#"><img src="img/md5.JPG" alt="md3"></a>
+                                </div>
+                                <h4>21FW</h4><h3>NEW</h3><br><br>
+                                <p>남녀공용 씬에어(THINAIR) CLOUD BL</p>
+                                <h1>450,000 w</h1>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="md_img">
+                                    <a href="#"><img src="img/md8.JPG" alt="md4"></a>
+                                </div>
+                                <h4>21FW</h4><h3>NEW</h3><br><br>
+                                <p>WWF 비숑(BICHON) 블레어 자켓</p>
+                                <h1>149,000 w</h1>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="md_img">
+                                    <a href="#"><img src="img/md9.JPG" alt="md5"></a>
+                                </div>
+                                <h4>21FW</h4><h3>NEW</h3><br><br>
+                                <p>여성 씬에어 (THINAIR) LITE SNOW</p>
+                                <h1>430,000 w</h1>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="md_img">
+                                    <a href="#"><img src="img/md3.JPG" alt="md6"></a>
+                                </div>
+                                <h4>21FW</h4><h3>NEW</h3><br><br>
+                                <p>씬에어(THINAIR) CLOUD BLACK</p>
+                                <h1>370,000 w</h1>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="md_img">
+                                    <a href="#"><img src="img/md1.JPG" alt="md7"></a>
+                                </div>
+                                <h4>21FW</h4><h3>NEW</h3><br><br>
+                                <p>남녀공용 비숑(BICHON) 리버시블 다운</p>
+                                <h1>269,000 w</h1>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="md_img">
+                                    <a href="#"><img src="img/md7.JPG" alt="md8"></a>
+                                </div>
+                                <h4>21FW</h4> <h3>NEW</h3><br><br>
+                                <p>남녀공용 씬에어(THINAIR) LONG STR...</p>
+                                <h1>470,000 w</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bar">
+            </div>
+        </section>
+        <section class="s5">
+            <div class="video">
+                <a href="https://www.youtube.com/watch?v=maWFxKvspkU&t=3s"><img src="img/k2_youtube.png" alt="k2 cf"></a>
+            </div>
+            <div class="video_icon">
+                <a href="https://www.youtube.com/watch?v=maWFxKvspkU&t=3s"><img src="img/play_btn.png" alt="재생버튼"></a>
+            </div>
+            <div class="bar">
+            </div>
+        </section>
+        <section class="s6">
+            <div class="box">
+                <ul>
+                    <li><img src="img/k2_insta1.png" alt="k2ootd1"></li>
+                    <li><img src="img/k2_insta2.png" alt="k2ootd2"></li>
+                    <li><img src="img/k2_insta3.png" alt="k2ootd3"></li>
+                    <li><img src="img/k2_insta4.png" alt="k2ootd4"></li>
+                    <li><img src="img/k2_insta5.png" alt="k2ootd5"></li>
+                    <li><img src="img/k2_insta6.png" alt="k2ootd6"></li>
+                    <li><img src="img/k2_insta7.png" alt="k2ootd7"></li>
+                    <li><img src="img/k2_insta8.png" alt="k2ootd8"></li>
+                    <li><img src="img/k2_insta9.png" alt="k2ootd9"></li>
+                    <li><img src="img/k2_insta10.png" alt="k2ootd10"></li>
+                    <li><img src="img/k2_insta11.png" alt="k2ootd11"></li>
+                    <li><img src="img/k2_insta12.png" alt="k2ootd12"></li>
+                    <li><img src="img/k2_insta13.png" alt="k2ootd13"></li>
+                    <li><img src="img/k2_insta14.png" alt="k2ootd14"></li>
+                    <li><img src="img/k2_insta15.png" alt="k2ootd15"></li>
+                    <li><img src="img/k2_insta16.png" alt="k2ootd16"></li>
+                    <li><img src="img/k2_insta17.png" alt="k2ootd17"></li>
+                    <li><img src="img/k2_insta18.png" alt="k2ootd18"></li>
+                </ul>
+            </div>
+            <div class="bar">
+            </div>
+        
+            <div class="btn">
+                <a href="#"><img src="img/k2_btn2.png" alt="인스타그램버튼"></a>
+            </div>
+            <div class="bar">
+            </div>
+        </section>
+        <footer>
+            <hr>
+            <div class="ft_box">
+                <div class="ft_top">
+                   <ul>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">매장찾기</a></li>
+                        <li><a href="#">A/S조회</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="box">
+                <div class="ft_left">
+                    <img src="img/k2logo_grey.png" alt="k2 로고">
+                    <address>서울특별시 강남구  자곡로 174-14, 901호(자곡동) 케이투코리아 (주) 대표이사 정영훈<br>
+                    사업자 등록번호 137-81-14921<br>
+                    통신판매업신고번호 제 2019-서울강남-02482호 부가 통신사업신고번호 4236  FAX 02-3294-8183
+                    </address>
+                    <br>
+                    <br>
+                    <copyright>COPYRIGHT 2016 K2 korea. ALL RIGHTS RESERVED.
+                    </copyright>
+                </div>
+                <div class="ft_right">
+                    <h1>CS CENTER</h1><br>
+                    <h1>1644-7781<span>(유료)/080-468-7782(수신자부담)</span></h1>
+                    <p>서울시 성동구 아차산로 11가길 3 ,2층 / 케이투코리아(주) CS  CENTER<br>
+                    상담시간 : 9:00 ~17:00(토, 일, 공휴일 휴무)<br>
+                    점심시간 :  12:30 ~13:30 (상담불가)</p>
+                </div>
+            </div>
+            <div class="bar"></div>
+        </footer>
+    </div>
+</body>
+</html>
